@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sobre o IF Capivari</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="cards-bg">
+
+    <ion-card class="cards-list-geral">
+        <ion-card-header color="padrao"><ion-icon name="thumbs-up"></ion-icon> IF Capivari (Release 0.0.9)</ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <h5>       
+             <p><ion-icon name="star-outline"></ion-icon> Funcionalidades:</p>
+             <p> - Disponibilizar artigos e notícias do IFSP.</p>
+             <p> - Acesso ao Moodle para alunos (notas e disciplinas) e docentes (disciplinas, alunos e notas).</p>
+             <p> - Mural com login social para procurar/oferecer caronas/moradias.</p>
+             <p> - Ver posts do IF no Facebook.</p>
+             <p>.</p>
+             <p><ion-icon name="code-working"></ion-icon> Em desenvolvimento:</p>
+             <p> - Navegação por abas.</p>
+             <p> - Novo mural social com mais opções.</p>
+             <p> - Notificação para novas notícias.</p>
+            </h5>
+            <button ion-button icon-right full color="padraoleve" (click)="avaliarApp()">Avaliar o App <ion-icon name="thumbs-up"></ion-icon></button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="cards-list-geral">
+        <ion-card-header color="padrao"><ion-icon name="contact"></ion-icon> Desenvolvedor</ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <p>Seguem meus contatos para dúvidas e sugestões:</p>
+            <p> <ion-icon name="logo-facebook" color="primary"></ion-icon> Douglas Diez Goncalves</p>           
+            <p> <ion-icon name="logo-whatsapp" color="secondary"></ion-icon> +55 19 9 9340 5000</p>     
+            <p> <ion-icon name="mail" color="danger"></ion-icon> dougdiez@gmail.com</p>
+            <p> <ion-icon name="logo-linkedin" color="primary"></ion-icon> linkedin.com/in/douglasdiezgoncalves</p>
+          </ion-list>
+        </ion-card-content>
+      </ion-card> 
+
+    <ion-card class="cards-list-geral">
+      <ion-card-header color="padrao"><ion-icon name="cube"></ion-icon> Projeto</ion-card-header>
+      <ion-card-content>
+        <ion-list><h5>       
+           <p>Originado como uma proposta de TCC, o projeto visa desenvolver um aplicativo móvel
+             dedicado a solucionar uma demanda do IFSP Campus Capivari. Essa demanda consiste em disponibilizar para a comunidade 
+             conteúdos acadêmicos e institucionais em dispositivos móveis. 
+             Este projeto vem como uma continuação aproveitando o projeto da API Rest desenvolvida 
+             pelo meu amigo <ion-icon name="person"></ion-icon> Lucas Campaci, a qual alimenta este aplicativo com os dados do câmpus.</p>
+           <p><ion-icon name="person"></ion-icon> Orientado: Douglas Diez Goncalves</p>
+           <p><ion-icon name="person"></ion-icon> Orientador: Prof. Rafael Wendel Pinheiro</p>
+           </h5>
+        </ion-list>
+      </ion-card-content>
+    </ion-card> 
+
+    <ion-card class="cards-list-geral">
+      <ion-card-header color="padrao"><ion-icon name="construct"></ion-icon> Desenvolvimento</ion-card-header>
+      <ion-card-content>
+        <ion-list>       
+           <p>Para desenvolver a proposta, foi escolhida uma abordagem de desenvolvimento mobile híbrido,
+              aonde o código web é compilado em um pacote que roda como uma página web no WebView nativo
+              dos smartphones, e através de plugins e APIs deste pacote, pode acessar o hardware e recursos nativos.
+             Principais tecnologias e ferramentas: </p>          
+             <p><ion-icon name="logo-angular" color="danger"> Angular 4 </ion-icon> -- <ion-icon name="ionic" color="primary"> Ionic 3</ion-icon></p>
+             <p><ion-icon name="bonfire" color="bright"> AngularFire + Firebase</ion-icon></p>
+             <p><ion-icon name="cube" color="ocean"> Apache Cordova </ion-icon> -- <ion-icon name="logo-nodejs" color="padrao"> NodeJS</ion-icon></p> 
+             <p><ion-icon name="logo-github"> Github </ion-icon> -- <ion-icon name="logo-javascript" color="amarelo"> JavaScript</ion-icon></p>
+             <p><ion-icon name="code-download" color="ocean"> Visual Studio Code</ion-icon></p>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+
+</ion-content>

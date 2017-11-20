@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Moodle</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-card class="cards-list-moodle">
+      <ion-card-header>Área de Consulta dos Alunos e Docentes</ion-card-header>
+      <ion-card-content>
+        <ion-list color="light">
+          <button ion-item (click)="exibirUsuario()"><ion-icon name="person" item-left></ion-icon>Seus Dados Cadastrados </button>
+          <button ion-item (click)="exibirSuasDisciplinas()"><ion-icon name="paper" item-left></ion-icon>Suas Disciplinas e Notas</button>
+          <button ion-item (click)="exibirSuasNotas()"><ion-icon name="podium" item-left></ion-icon>Todas as Suas Notas</button>   
+          <button ion-item color="padraoleve" (click)="irDocentes()"><ion-icon name="ionic" item-left></ion-icon>Acessar Área Docentes</button>           
+        </ion-list>
+      </ion-card-content>  
+    </ion-card>
+
+    <ion-card>
+     <ion-card-content>
+      <button ion-button icon-right full color="light" (click)="voltarInicio()">Voltar Início <ion-icon name="arrow-back"></ion-icon></button>
+      <button ion-button icon-right full color="lightred" (click)="deslogar()">Deslogar<ion-icon name="log-out"></ion-icon></button>              
+     </ion-card-content>
+   </ion-card>   
+    
+</ion-content>

@@ -1,0 +1,71 @@
+<ion-header>  
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>IF Capivari</ion-title>
+  </ion-navbar> 
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+  <ion-card class="cards-list-home" >
+   <ion-item><ion-icon name="school" item-left color="padrao"> Moodle</ion-icon></ion-item>         
+   <ion-item *ngIf="nome"> 
+     <ion-avatar item-left><img src="{{ foto }}"></ion-avatar>
+       <h2>{{ nome }}</h2>
+       <h3>Prontuario: {{ user }}</h3>
+       <p>Logado com sucesso!</p>               
+   </ion-item>
+   <ion-card-content *ngIf="!nome">
+      <p>Agora você pode conferir suas notas direto do celular!</p>    
+      <p>Alunos poderão ver suas notas e disciplinas.</p>
+      <p>Docentes poderão ver suas disciplinas, alunos e notas.</p>             
+   </ion-card-content>          
+   <ion-card-content>
+     <button ion-button icon-right color="padraoleve" full (click)="irMoodle()">Acessar o Moodle <ion-icon name="log-in"></ion-icon></button>
+   </ion-card-content> 
+  </ion-card>
+    
+  <ion-card class="cards-list-home" >
+    <ion-item><ion-icon name="megaphone" item-left color="padrao"> Mural</ion-icon></ion-item>
+    <ion-item *ngIf="username">
+        <ion-avatar item-left><img src="{{ photo }}"></ion-avatar>
+        <h2>{{ username }}</h2>
+        <p>Logado com sucesso!</p>
+        <p>Interaja com a comunidade!</p>
+    </ion-item>
+    <ion-card-content *ngIf="username"> 
+      <button ion-button icon-right full color="padraoleve" (click)="muralPage()" >Acessar o Mural <ion-icon name="log-in"></ion-icon></button> 
+    </ion-card-content> 
+    <ion-card-content *ngIf="!username">    
+        <p>Aqui você encontrará pessoas que estão: procurando/oferecendo carona/moradia. </p>
+        <p>Você pode preencher e publicar o formulário no mural para que outras pessoas possam te contactar. </p>
+        <button ion-button icon-right color="vermelho" full (click)="muralPage()">Acessar com o Google <ion-icon name="logo-googleplus"></ion-icon></button>
+        <button ion-button icon-right color="primary" full (click)="muralPage()">Acessar com o Facebook <ion-icon name="logo-facebook"></ion-icon></button>              
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+     <ion-item><ion-icon name="paper" item-left color="padrao"> Notícias</ion-icon></ion-item>
+     <ion-card-content>
+      <ion-list>
+        <button ion-item full *ngFor="let item of noticias" (click)="abrirArtigo(item)"> 
+         {{ item.post_title }} 
+        </button>
+      </ion-list>
+      <button ion-button icon-right full color="padraoleve" (click)="verNoticias()">Ler Mais Notícias <ion-icon name="logo-rss"></ion-icon></button>        
+     </ion-card-content>
+  </ion-card>  
+
+  <ion-card>
+    <ion-card-content>
+      <button ion-button icon-right full color="padraoleve" (click)="faceBook()">Facebook do Campus <ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-button icon-right full color="padraoleve" (click)="faceTeca()">Facebook da Biblioteca <ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-content>      
+      <button ion-button icon-right full color="padraoleve" (click)="sobrePage()">Sobre o App <ion-icon name="information-circle"></ion-icon></button>
+      <button ion-button icon-right full color="secondary" (click)="avaliarApp()">Avaliar o App <ion-icon name="thumbs-up"></ion-icon></button>
+    </ion-card-content>
+  </ion-card> 
+  
+</ion-content>

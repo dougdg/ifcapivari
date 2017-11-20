@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Suas Notas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-card class="cards-list-moodle" *ngFor="let item of notas">
+      <ion-card-header>
+        ({{ item.shortname }})
+        {{ item.fullname }}
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>       
+          <p><b>Item:</b> {{ item.itemname }}</p>
+          <p><b>Nota:</b> {{ item.finalgrade/10 }}</p>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>   
+    
+</ion-content>

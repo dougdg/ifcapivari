@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar color="padrao">
+    <ion-title>
+      Seus Dados no Moodle
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-card><img src="{{ image }}"></ion-card>
+        <ion-item><b>Prontuario:</b> {{ username }} - <b>Id:</b> {{ id }} </ion-item>
+        <ion-item><b>Nome:</b> {{ firstname }} {{ lastname }}</ion-item>
+        <ion-item><b>Email:</b> {{ email }} </ion-item>
+        <ion-item><b>Cidade:</b> {{ city }} </ion-item>        
+    </ion-list>
+</ion-content>

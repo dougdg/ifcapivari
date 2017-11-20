@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Alunos desta Disciplina</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-card class="cards-list-moodle">
+      <ion-card-header>Lista dos Alunos: </ion-card-header>
+      <ion-card-content>
+        <ion-list *ngFor="let a of alunos">
+          <p>{{ a.id }} - {{ a.firstname }} {{ a.lastname }}</p>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>   
+    
+</ion-content>

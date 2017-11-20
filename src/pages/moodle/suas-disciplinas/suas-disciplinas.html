@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Suas Disciplinas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-card class="cards-list-moodle" *ngFor="let d of disciplinas">
+      <ion-card-header>
+        {{ d.shortname }} - {{ d.fullname }}
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>       
+           <p><b>Sigla: </b> {{ d.shortname }} </p>
+           <p><b>Nome: </b> {{ d.fullname }} </p>           
+           <ion-list *ngFor="let p of d.profs">
+              <p><b>Docente: </b> {{ p.tutor }} </p>
+           </ion-list>
+           <button ion-button icon-right full color="padraoleve" (click)="verNotas(d.id)">Ver Notas</button>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>   
+    
+</ion-content>

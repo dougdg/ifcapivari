@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Oferecendo Moradias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-card class="cards-list-moodle" *ngFor="let m of moradias | async">
+      <ion-card-content>
+        <ion-list>       
+           <p><b>Nome: </b> {{ m.nome }} </p>
+           <p><b>Celular: </b> {{ m.cel }} </p>   
+           <p><b>Período: </b> {{ m.periodo }} </p> 
+           <p><b>Local: </b> {{ m.local }} </p> 
+           <p><b>Info: </b> {{ m.txt }} </p> 
+        </ion-list>
+      </ion-card-content>
+    </ion-card>   
+
+</ion-content>

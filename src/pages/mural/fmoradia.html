@@ -1,0 +1,56 @@
+<ion-header>    
+    <ion-navbar color="padrao">
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+      <ion-title>Formulário para Moradia</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+
+  <ion-card>
+    <form (ngSubmit)="enviarMoradia()" #autForm="ngForm">
+      <ion-list no-lines inset>
+
+        <ion-list>
+          <ion-item>
+            <ion-label icon-left><ion-icon name="arrow-dropright"></ion-icon>Você está:</ion-label>
+            <ion-select required [(ngModel)]="moradia.acao" [ngModelOptions]="{standalone: true}">
+              <ion-option value="Procurando">Procurando</ion-option>
+              <ion-option value="Oferecendo">Oferecendo</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label icon-left><ion-icon name="arrow-dropright"></ion-icon>Seu Período:</ion-label>
+            <ion-select required [(ngModel)]="moradia.periodo" [ngModelOptions]="{standalone: true}">
+              <ion-option value="Manha">Manhã</ion-option>
+              <ion-option value="Tarde">Tarde</ion-option>
+              <ion-option value="Noite">Noite</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        
+        <ion-item>
+          <ion-label icon-left><ion-icon name="home"></ion-icon>Local:</ion-label>
+          <ion-input type="text" required placeholder="ex: Rua, Bairro" [(ngModel)]="moradia.local" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label icon-left><ion-icon name="logo-whatsapp"></ion-icon>Celular:</ion-label>
+          <ion-input required [textMask]="{mask: masks.cel}" placeholder="(19) 12345-6789" [(ngModel)]="moradia.cel" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item> 
+
+        <ion-item>
+          <ion-label icon-left><ion-icon name="text"></ion-icon>Info:</ion-label>
+          <ion-input type="text" placeholder="Perto do Supermercado" [(ngModel)]="moradia.txt" [ngModelOptions]="{standalone: true}" ></ion-input>
+        </ion-item> 
+
+        <button ion-button icon-right color="padrao" full class="submit-btn" type="submit" [disabled]="!autForm.form.valid">Publicar formulário<ion-icon name="log-in"></ion-icon></button>
+      
+      </ion-list>
+    </form>
+
+  </ion-card>
+</ion-content>

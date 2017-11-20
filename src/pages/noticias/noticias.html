@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="padrao">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>IFSP Notícias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item full color="light" *ngFor="let item of noticias" (click)="abrirArtigo(item)">
+       <p> {{ item.post_title }} </p>
+    </button>
+  </ion-list>
+
+</ion-content>

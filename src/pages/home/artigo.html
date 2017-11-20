@@ -1,0 +1,16 @@
+
+<ion-header>
+  <ion-navbar color="padrao">
+    <ion-title>
+      IFSP Notícias
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 color="padrao">{{ item.post_title }}</h2>  
+  <p color="cinza"><ion-icon name="clock"></ion-icon> {{ item.post_date }}</p>
+  <p color="cinza"><ion-icon name="person"></ion-icon> {{ item.autor }}</p>
+  <h6><div [innerHTML]=item.post_content></div></h6>
+</ion-content>
+
