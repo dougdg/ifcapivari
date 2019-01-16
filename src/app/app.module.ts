@@ -39,19 +39,14 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { TextMaskModule } from 'angular2-text-mask';
 
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyB3p5DdTfUs91UBC_FZx2Hp8FNcBUj4H-k",
-    authDomain: "ifbook-7b117.firebaseapp.com",
-    databaseURL: "https://ifbook-7b117.firebaseio.com",
-    projectId: "ifbook-7b117",
-    storageBucket: "ifbook-7b117.appspot.com",
-    messagingSenderId: "447120520041"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 };
 
-// oauth "client_id": "447120520041-np4tt6538qp8n09kc54srajbt516lp6f.apps.googleusercontent.com",
-// "project_number": "447120520041",
-// 'webClientId': '447120520041-eoh0s54jnh999kq8mkr22fg4p3djtg25.apps.googleusercontent.com',
-// 'webClientSecret' : 'UN9GC-UnL5_AYfz7YXCJkpJr',
-// "package_name": "com.dougdiez.ifbook.dev",
 
 @NgModule({
   declarations: [
